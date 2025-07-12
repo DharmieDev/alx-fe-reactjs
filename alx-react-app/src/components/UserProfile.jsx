@@ -1,11 +1,9 @@
 const UserProfile = (props) => {
-const { Name, Age, Bio } = props;
-
   return (
     <div>
-      <h2>{Name}</h2>
-      <p>{Age}</p>
-      <p>{Bio}</p>
+      <h2>Name: {props.name}</h2>
+      <p>Age: {props.age}</p>
+      <p>Bio: {props.bio}</p>
     </div>
   )
 }
