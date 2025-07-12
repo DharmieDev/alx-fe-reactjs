@@ -1,12 +1,11 @@
-import React from 'react'
-
-
 const UserProfile = (props) => {
+const { Name, Age, Bio } = props;
+
   return (
     <div>
-      <h2>{props.name}</h2>
-      <p>{props.age}</p>
-      <p>{props.bio}</p>
+      <h2>{Name}</h2>
+      <p>{Age}</p>
+      <p>{Bio}</p>
     </div>
   )
 }
