@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { MyContext } from "./components/UserContext.js";
+import  MyContext  from "./components/UserContext.js";
 import ProfilePage from "./components/ProfilePage";
 
 function App() {
