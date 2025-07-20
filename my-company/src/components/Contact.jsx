@@ -17,11 +17,6 @@ const Contact = () => {
        alert('Form submitted!');
      };
 
-     const inputStyle = {
-        width: "100px",
-        height: "30px"
-     }
-
   return (
     <div style={{}}>
       <h1 style={{

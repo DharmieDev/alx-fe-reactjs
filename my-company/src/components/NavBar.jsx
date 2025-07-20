@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function NavBar() {
+function Navbar() {
 const divStyle = {
     alignItems: "center",
     justifyContent: "center",
@@ -66,4 +66,4 @@ const pStyle = {
   )
 }
 
-export default NavBar
+export default Navbar
