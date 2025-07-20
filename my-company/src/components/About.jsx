@@ -19,7 +19,9 @@ const About = () => {
         fontWeight: "500",
         width: "30%",
         margin: "20px auto",
-      }}>Our company has been providing top-notch services since 1990. We specialize in various fields including technology, marketing, and consultancy.</p>
+      }}>
+        Our company has been providing top-notch services since 1990. We specialize in various fields including technology, marketing, and consultancy.
+        </p>
     </div>
   )
 }
