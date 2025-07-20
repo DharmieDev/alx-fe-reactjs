@@ -23,6 +23,10 @@ function Navbar() {
     alignItems: "center",
     gap: "20px",
     padding: "0",
+    backgroundColor: "hsl(240, 100%, 30%)",
+    padding: "5px 20px",
+    borderRadius: "10px"
+    
   };
 
   const linkStyle = {
@@ -34,6 +38,7 @@ function Navbar() {
     fontFamily: "Inter",
     fontSize: "14px",
     fontWeight: "400",
+    color: "white"
   };
 
   const pStyle = {
