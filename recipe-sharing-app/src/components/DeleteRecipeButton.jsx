@@ -13,8 +13,22 @@ const DeleteRecipeButton = ({recipeId}) => {
     }
 
   return (
-    <div>
-      <button onClick={handleDelete}>Delete Recipe</button>
+    <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        maxWidth: '400px',
+        margin: 'auto',
+    }}>
+      <button onClick={handleDelete} style={{
+          padding: '10px 20px',
+          backgroundColor: 'black',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          width:'40%',
+        marginTop: '10px',
+        }}>Delete Recipe</button>
     </div>
   )
 }
