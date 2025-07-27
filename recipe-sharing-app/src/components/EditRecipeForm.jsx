@@ -9,7 +9,7 @@ const EditRecipeForm = ({recipe}) => {
     const updateRecipe = useRecipeStore(state => state.updateRecipe);
 
     const handleSumbit = (event) => {
-        event.preventDefult();
+        event.preventDefault();
         updateRecipe({ id: recipe.id, title, description});
         alert("Recipe updated!");
     }
