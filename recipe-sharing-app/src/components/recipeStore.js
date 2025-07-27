@@ -4,6 +4,8 @@ const useRecipeStore = create((set, get) => ({
   recipes: [],
   searchTerm: '',
   filteredRecipes: [],
+  favorites: [],
+  recommendations: [],
 
   addRecipe: (newRecipe) => {
     const updatedRecipes = [...get().recipes, newRecipe];
@@ -24,6 +26,7 @@ const useRecipeStore = create((set, get) => ({
       filteredRecipes: updatedRecipes.filter(recipe =>
         recipe.title.toLowerCase().includes(get().searchTerm.toLowerCase())
       ),
+      favorites: get().favorites.filter((favId) => favId !== id),
     });
   },
 
@@ -47,6 +50,31 @@ const useRecipeStore = create((set, get) => ({
         recipe.title.toLowerCase().includes(term.toLowerCase())
       ),
     });
+  },
+
+  addFavorite: (recipeId) => {
+    const { favorites } = get();
+    if (!favorites.includes(recipeId)) {
+      set({ favorites: [...favorites, recipeId] });
+    }
+  },
+
+  removeFavorite: (recipeId) =>
+    set((state) => ({
+      favorites: state.favorites.filter((id) => id !== recipeId),
+    })),
+
+  generateRecommendations: () => {
+    const { recipes, favorites } = get();
+    const recommended = recipes.filter(
+      (r) =>
+        !favorites.includes(r.id) && favorites.some((id) =>
+          r.title.toLowerCase().includes(
+            recipes.find((f) => f.id === id)?.title.split(" ")[0].toLowerCase()
+          )
+        )
+    );
+    set({ recommendations: recommended });
   },
 }));
 

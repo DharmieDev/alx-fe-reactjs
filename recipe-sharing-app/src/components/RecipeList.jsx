@@ -6,6 +6,11 @@ import SearchBar from './SearchBar';
 const RecipeList = () => {
     const recipes = useRecipeStore(state => state.recipes);
     const filteredRecipes = useRecipeStore(state => state.filteredRecipes);
+    const favorites = useRecipeStore(state => state.favorites);
+   const addFavorite = useRecipeStore(state => state.addFavorite);
+   const removeFavorite = useRecipeStore(state => state.removeFavorite);
+
+   const isFavorite = (id) => favorites.includes(id);
 
   return (
     <div>
@@ -25,6 +30,23 @@ const RecipeList = () => {
         {filteredRecipes.length > 0 ? (filteredRecipes.map((recipe) => (
           <li key={recipe.id}>
             <Link to={`/recipe/${recipe.id}`}>{recipe.title}</Link>
+             <button
+                onClick={() =>
+                  isFavorite(recipe.id)
+                    ? removeFavorite(recipe.id)
+                    : addFavorite(recipe.id)
+                }
+                style={{
+                  padding: '5px 10px',
+                  backgroundColor: isFavorite(recipe.id) ? 'crimson' : 'green',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                }}
+              >
+                {isFavorite(recipe.id) ? 'Unfavorite' : 'Favorite'}
+              </button>
           </li>
         ))
       ) : (<li>No Recipe found</li>)
@@ -35,3 +57,5 @@ const RecipeList = () => {
 }
 
 export default RecipeList
+
+
