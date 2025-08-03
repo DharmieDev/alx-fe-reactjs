@@ -39,11 +39,39 @@ apiClient.interceptors.response.use(
  * @param {string} username
  * @returns {Promise<Object>} user data
  */
-export async function fetchUserData(username) {
-  if (!username || !username.trim()) {
-    throw new Error('Username is required');
+export async function searchUsers({ username = '', 
+    location = '', 
+    minRepos = 0, 
+    page = 1, 
+    per_page = 30 }) {
+  // Build the `q` parameter with qualifiers
+  let qualifiers = [];
+  if (username.trim()) {
+    qualifiers.push(`${username.trim()} in:login`);
   }
-  const encoded = encodeURIComponent(username.trim());
-  const response = await apiClient.get(`/users/${encoded}`);
-  return response.data; // axios auto-parses JSON
+  if (location.trim()) {
+    qualifiers.push(`location:${location.trim()}`);
+  }
+  if (minRepos > 0) {
+    qualifiers.push(`repos:>=${minRepos}`);
+  }
+  // If nothing specified, fallback to a broad query to avoid empty q
+  if (qualifiers.length === 0) {
+    qualifiers.push('type:user');
+  }
+  const q = qualifiers.join(' ');
+
+  const response = await apiClient.get('/search/users', {
+    params: {
+      q,
+      page,
+      per_page,
+    },
+  });
+
+  return {
+    total_count: response.data.total_count,
+    items: response.data.items,
+    // GitHub doesn't give total pages directly; caller can infer from total_count/per_page
+  };
 }
