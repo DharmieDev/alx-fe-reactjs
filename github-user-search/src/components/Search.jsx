@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { searchUsers } from '../services/githubService';
+import { fetchUserData } from '../services/githubService';
 
 export default function Search() {
   // form fields
@@ -27,7 +27,7 @@ export default function Search() {
 
     try {
       setLoading(true);
-      const { items, total_count } = await searchUsers({
+      const { items, total_count } = await fetchUserData({
         username,
         location,
         minRepos,
@@ -50,7 +50,7 @@ export default function Search() {
     setError('');
     try {
       setLoading(true);
-      const { items } = await searchUsers({
+      const { items } = await fetchUserData({
         username,
         location,
         minRepos,
