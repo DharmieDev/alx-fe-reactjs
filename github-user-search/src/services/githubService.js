@@ -39,14 +39,14 @@ apiClient.interceptors.response.use(
  * Get a specific user by username.
  * Equivalent to: GET https://api.github.com/users/{username}
  */
-export async function fetchUserData(username) {
-  if (!username || !username.trim()) {
-    throw new Error('Username is required');
-  }
-  const encoded = encodeURIComponent(username.trim());
-  const response = await apiClient.get(`/users/${encoded}`);
-  return response.data;
-}
+// export async function fetchUserData(username) {
+//   if (!username || !username.trim()) {
+//     throw new Error('Username is required');
+//   }
+//   const encoded = encodeURIComponent(username.trim());
+//   const response = await apiClient.get(`/users/${encoded}`);
+//   return response.data;
+// }
 
 /**
  * Advanced search: users filtered by username (partial), location, and minimum repos.
@@ -59,7 +59,7 @@ export async function fetchUserData(username) {
  * @param {number} params.page - page number (1-based)
  * @param {number} params.per_page - results per page
  */
-export async function searchUsers({
+export async function fetchUserData({
   username = '',
   location = '',
   minRepos = 0,
