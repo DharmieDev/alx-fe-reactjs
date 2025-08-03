@@ -1,23 +1,30 @@
-import { useEffect } from 'react';
-import { useGitHubUserStore } from '../store/useGitHubUserStore';
+import { useState } from 'react';
+import { fetchUserData } from '../services/githubService';
 
 export default function Search() {
-  const input     = useGitHubUserStore((s) => s.input);
-  const user      = useGitHubUserStore((s) => s.user);
-  const loading   = useGitHubUserStore((s) => s.loading);
-  const error     = useGitHubUserStore((s) => s.error);
-  const setInput  = useGitHubUserStore((s) => s.setInput);
-  const searchUser = useGitHubUserStore((s) => s.searchUser);
-  const clear     = useGitHubUserStore((s) => s.clear);
+  const [input, setInput] = useState('');
+  const [user, setUser] = useState(null);          // successful result
+  const [loading, setLoading] = useState(false);   // loading state
+  const [error, setError] = useState('');          // error message
 
-  // optional: auto-focus or debug
-  useEffect(() => {
-    // debug: console.log({ input, user, loading, error });
-  }, [input, user, loading, error]);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    searchUser();
+    setUser(null);
+    setError('');
+    if (!input.trim()) {
+      setError('Please enter a username.');
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const data = await fetchUserData(input);
+      setUser(data);
+    } catch (err) {
+      setError(err.message || "Looks like we can't find the user");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -35,17 +42,11 @@ export default function Search() {
           disabled={loading}
           className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         >
-          {loading ? 'Loading...' : 'Search'}
-        </button>
-        <button
-          type="button"
-          onClick={clear}
-          className="ml-2 border px-4 py-2 rounded"
-        >
-          Clear
+          Search
         </button>
       </form>
 
+      {/* Conditional rendering */}
       {loading && <p className="text-gray-700">Loading...</p>}
 
       {error && !loading && (
@@ -84,4 +85,3 @@ export default function Search() {
     </div>
   );
 }
-
