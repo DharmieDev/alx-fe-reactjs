@@ -186,7 +186,7 @@ export default function Search() {
         ))}
 
         {!loading && results.length === 0 && !error && (
-          <div className="text-gray-600">No users found with those criteria.</div>
+          <div className="text-gray-600">Looks like we cant find the user.</div>
         )}
       </div>
 
