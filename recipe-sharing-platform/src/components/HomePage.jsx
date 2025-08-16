@@ -15,16 +15,16 @@ const HomePage = () => {
 
   return (
       <div className='bg-gray-100'>
-          <div className='m-6 flex flex-row flex-wrap gap-6 justify-center'>
+          <div className='m-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
               {recipes.map((recipe) => (
                 <div key={recipe.id}
-                    className='block w-80 h-auto rounded-xl bg-white overflow-hidden shadow-md
+                    className='block w-72 h-auto rounded-xl bg-white overflow-hidden shadow-md
                     hover:shadow-xl transition-shadow duration-300 transform hover:scale-105'
                     >
                   <img
                   src={recipe.image}
                   alt={recipe.title}
-                  className='w-80 h-48 object-cover'
+                  className='w-72 h-48 object-cover'
                   />
                   <div className='m-2 p-2'>
                     <h3 className='font-semibold mb-1'>{recipe.title}</h3>
