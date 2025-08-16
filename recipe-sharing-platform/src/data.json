@@ -3,72 +3,297 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
-    "image": "https://images.unsplash.com/photo-1633337474564-1d9478ca4e2e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1633337474564-1d9478ca4e2e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "30 mins",
+    "servings": 4,
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g Parmesan cheese",
+      "2 cloves garlic",
+      "Salt and black pepper to taste"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted water until al dente.",
+      "Fry pancetta with garlic until crisp.",
+      "Whisk eggs and Parmesan together.",
+      "Drain pasta, add to pancetta, and remove from heat.",
+      "Quickly mix in egg mixture to create a creamy sauce.",
+      "Season with salt and pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken cooked in a smooth buttery and creamy tomato-based gravy.",
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "50 mins",
+    "servings": 4,
+    "ingredients": [
+      "500g chicken breast",
+      "200ml yogurt",
+      "2 tbsp garam masala",
+      "1 onion, chopped",
+      "2 cloves garlic",
+      "1-inch ginger, grated",
+      "400g canned tomatoes",
+      "200ml cream",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spices for at least 30 minutes.",
+      "Grill or pan-fry the chicken until golden.",
+      "Cook onions, garlic, and ginger in a pan.",
+      "Add tomatoes and simmer until thickened.",
+      "Stir in cream and cooked chicken.",
+      "Simmer 10 minutes and serve."
+    ]
   },
   {
     "id": 3,
     "title": "Beef Bourguignon",
     "summary": "French beef stew braised in red wine with mushrooms, onions, and bacon.",
-    "image": "https://plus.unsplash.com/premium_photo-1726761709221-06117b8d905a?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://plus.unsplash.com/premium_photo-1726761709221-06117b8d905a?q=80&w=881&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "2 hrs 30 mins",
+    "servings": 6,
+    "ingredients": [
+      "1kg beef chuck, cubed",
+      "150g bacon",
+      "2 carrots, sliced",
+      "1 onion, chopped",
+      "2 tbsp flour",
+      "500ml red wine",
+      "500ml beef stock",
+      "200g mushrooms",
+      "2 tbsp tomato paste",
+      "2 cloves garlic",
+      "Thyme and bay leaf"
+    ],
+    "instructions": [
+      "Brown bacon and beef in a heavy pot.",
+      "Add carrots, onion, and garlic; cook until softened.",
+      "Sprinkle flour and stir well.",
+      "Pour in wine and stock; add herbs.",
+      "Simmer covered for 2 hours.",
+      "Add mushrooms and cook until tender."
+    ]
   },
   {
     "id": 4,
     "title": "Margherita Pizza",
     "summary": "Thin-crust pizza topped with fresh tomatoes, mozzarella, basil, and olive oil.",
-    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "20 mins",
+    "servings": 2,
+    "ingredients": [
+      "1 pizza dough",
+      "150g mozzarella cheese",
+      "2 tomatoes, sliced",
+      "Fresh basil leaves",
+      "2 tbsp olive oil",
+      "Salt"
+    ],
+    "instructions": [
+      "Preheat oven to 220°C.",
+      "Roll out pizza dough on a tray.",
+      "Top with tomato slices, mozzarella, and basil.",
+      "Drizzle with olive oil and sprinkle with salt.",
+      "Bake for 10–12 minutes until crust is crisp."
+    ]
   },
   {
     "id": 5,
     "title": "Pad Thai",
     "summary": "Stir-fried rice noodles with shrimp, tofu, peanuts, egg, and tamarind sauce.",
-    "image": "https://images.unsplash.com/photo-1707546944460-dda9069b9c1e?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1707546944460-dda9069b9c1e?q=80&w=737&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "25 mins",
+    "servings": 3,
+    "ingredients": [
+      "200g rice noodles",
+      "150g shrimp",
+      "100g tofu, cubed",
+      "2 eggs",
+      "50g peanuts",
+      "100g bean sprouts",
+      "2 tbsp tamarind paste",
+      "2 tbsp fish sauce",
+      "1 tbsp sugar",
+      "2 tbsp oil"
+    ],
+    "instructions": [
+      "Soak rice noodles until soft.",
+      "Stir-fry tofu and shrimp in oil.",
+      "Push aside and scramble eggs.",
+      "Add noodles, tamarind, fish sauce, and sugar.",
+      "Toss with bean sprouts and peanuts before serving."
+    ]
   },
   {
     "id": 6,
     "title": "Sushi Platter",
     "summary": "An assortment of onigiri and maki rolls with fresh fish and seasoned rice.",
-    "image": "https://images.unsplash.com/photo-1625937751876-4515cd8e78bd?q=80&w=949&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1625937751876-4515cd8e78bd?q=80&w=949&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "1 hr",
+    "servings": 4,
+    "ingredients": [
+      "300g sushi rice",
+      "400ml water",
+      "60ml rice vinegar",
+      "200g raw salmon or tuna",
+      "Nori sheets",
+      "Soy sauce, wasabi, pickled ginger"
+    ],
+    "instructions": [
+      "Cook rice, then season with vinegar mixture.",
+      "Slice fish into thin strips.",
+      "Place rice on nori, add fish, and roll tightly.",
+      "Slice rolls and arrange with nigiri.",
+      "Serve with soy, wasabi, and ginger."
+    ]
   },
   {
     "id": 7,
     "title": "Ratatouille",
     "summary": "A Provençal vegetable casserole of eggplant, zucchini, peppers, and tomatoes.",
-    "image": "https://plus.unsplash.com/premium_photo-1713635953263-3dfbf736f73e?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://plus.unsplash.com/premium_photo-1713635953263-3dfbf736f73e?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "1 hr",
+    "servings": 6,
+    "ingredients": [
+      "1 eggplant",
+      "1 zucchini",
+      "1 bell pepper",
+      "2 tomatoes",
+      "2 tbsp olive oil",
+      "2 cloves garlic",
+      "Thyme and rosemary"
+    ],
+    "instructions": [
+      "Slice all vegetables evenly.",
+      "Sauté garlic in olive oil, then layer vegetables in a dish.",
+      "Season with herbs, salt, and pepper.",
+      "Bake at 190°C for 40 minutes until tender."
+    ]
   },
   {
     "id": 8,
     "title": "Shakshuka",
     "summary": "Poached eggs in a spicy tomato and pepper sauce; great for breakfast or brunch.",
-    "image": "https://images.unsplash.com/photo-1614570218825-c2a3be79b0fd?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1614570218825-c2a3be79b0fd?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "30 mins",
+    "servings": 4,
+    "ingredients": [
+      "1 onion",
+      "1 red pepper",
+      "2 cloves garlic",
+      "400g canned tomatoes",
+      "4 eggs",
+      "1 tsp paprika",
+      "1 tsp cumin",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Cook onion, pepper, and garlic in a skillet.",
+      "Add tomatoes and spices, simmer 10 minutes.",
+      "Make wells and crack eggs into them.",
+      "Cover and cook until eggs are set."
+    ]
   },
   {
     "id": 9,
     "title": "Fish and Chips",
     "summary": "Crispy beer-battered fish served with thick-cut fries and tartar sauce.",
-    "image": "https://images.unsplash.com/photo-1706711053549-f52f73a8960c?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1706711053549-f52f73a8960c?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "40 mins",
+    "servings": 4,
+    "ingredients": [
+      "4 cod fillets",
+      "200g flour",
+      "1 tsp baking powder",
+      "250ml beer",
+      "4 large potatoes",
+      "Oil for frying",
+      "Salt"
+    ],
+    "instructions": [
+      "Cut potatoes into thick fries and soak in water.",
+      "Mix flour, baking powder, and beer into a batter.",
+      "Coat fish fillets and deep fry until golden.",
+      "Fry potatoes until crisp.",
+      "Serve with tartar sauce."
+    ]
   },
   {
     "id": 10,
     "title": "Bibimbap",
     "summary": "Korean mixed rice bowl with vegetables, gochujang, and a fried egg.",
-    "image": "https://images.unsplash.com/photo-1600289031464-74d374b64991?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1600289031464-74d374b64991?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "45 mins",
+    "servings": 4,
+    "ingredients": [
+      "400g cooked rice",
+      "1 carrot, julienned",
+      "1 zucchini, julienned",
+      "100g spinach",
+      "200g beef, sliced",
+      "2 tbsp soy sauce",
+      "2 tbsp sesame oil",
+      "4 eggs",
+      "2 tbsp gochujang paste"
+    ],
+    "instructions": [
+      "Stir-fry vegetables separately and season lightly.",
+      "Cook beef slices with soy sauce and sesame oil.",
+      "Arrange rice in bowls and top with vegetables and beef.",
+      "Fry eggs and place on top.",
+      "Serve with gochujang."
+    ]
   },
   {
     "id": 11,
     "title": "Beef Tacos",
     "summary": "Soft tortillas filled with seasoned beef, salsa, cheese, and fresh cilantro.",
-    "image": "https://images.unsplash.com/photo-1723531055852-744d14ac00b4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1723531055852-744d14ac00b4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "25 mins",
+    "servings": 4,
+    "ingredients": [
+      "400g ground beef",
+      "1 onion, chopped",
+      "2 cloves garlic",
+      "1 tsp chili powder",
+      "1 tsp cumin",
+      "8 tortillas",
+      "100g shredded cheese",
+      "Fresh cilantro",
+      "Salsa"
+    ],
+    "instructions": [
+      "Cook beef with onion, garlic, and spices.",
+      "Warm tortillas.",
+      "Fill tortillas with beef, cheese, salsa, and cilantro.",
+      "Serve immediately."
+    ]
   },
   {
     "id": 12,
     "title": "Greek Salad",
     "summary": "Crisp salad with tomatoes, cucumber, olives, red onion, feta, and olive oil.",
-    "image": "https://images.unsplash.com/photo-1549745708-fa4a8423a0b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "image": "https://images.unsplash.com/photo-1549745708-fa4a8423a0b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "cookTime": "15 mins",
+    "servings": 4,
+    "ingredients": [
+      "2 tomatoes, chopped",
+      "1 cucumber, sliced",
+      "1 red onion, thinly sliced",
+      "100g feta cheese",
+      "50g black olives",
+      "2 tbsp olive oil",
+      "1 tsp oregano"
+    ],
+    "instructions": [
+      "Combine tomatoes, cucumber, onion, olives, and feta in a bowl.",
+      "Drizzle with olive oil and sprinkle oregano.",
+      "Toss gently and serve."
+    ]
   }
 ]
