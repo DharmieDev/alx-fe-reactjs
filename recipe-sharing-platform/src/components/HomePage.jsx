@@ -15,7 +15,7 @@ const HomePage = () => {
 
 
   return (
-      <div className='bg-gray-100'>
+      <div className='bg-gray-100 w-full min-h-screen p-2'>
           <div className='m-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
               {recipes.map((recipe) => (
                 <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
