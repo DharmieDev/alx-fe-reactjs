@@ -54,9 +54,9 @@ export default function AddRecipeForm({ onAddRecipe }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto max-w-2xl rounded-xl border bg-white p-6 shadow"
+      className="mx-auto w-full max-w-2xl rounded-xl border bg-white p-6 shadow md:max-w-2xl lg:max-w-3xl sm:p-6 md:p-8 shadow"
     >
-      <h2 className="mb-6 text-2xl font-bold">Add a New Recipe</h2>
+      <h2 className="mb-6 text-2xl font-bold sm:text-2xl md:text-3xl">Add a New Recipe</h2>
 
       {/* Title */}
       <div className="mb-4">
@@ -103,7 +103,7 @@ export default function AddRecipeForm({ onAddRecipe }) {
       {/* Submit */}
       <button
         type="submit"
-        className="rounded bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700"
+        className="rounded bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700 sm:w-auto"
       >
         Add Recipe
       </button>
