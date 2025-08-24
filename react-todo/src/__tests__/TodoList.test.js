@@ -1,17 +1,17 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import TodoApp from "../components/TodoApp";
+import TodoList from "../components/TodoList";
 
 describe("TodoApp Component", () => {
   test("renders initial todos", () => {
-    render(<TodoApp />);
+    render(<TodoList />);
     expect(screen.getByText("Buy groceries")).toBeInTheDocument();
     expect(screen.getByText("Walk the dog")).toBeInTheDocument();
     expect(screen.getByText("Read a book")).toBeInTheDocument();
   });
 
   test("adds a new todo", () => {
-    render(<TodoApp />);
+    render(<TodoList />);
     const input = screen.getByPlaceholderText(/add a new todo/i);
     const button = screen.getByText(/add/i);
 
@@ -23,7 +23,7 @@ describe("TodoApp Component", () => {
   });
 
   test("toggles a todo", () => {
-    render(<TodoApp />);
+    render(<TodoList />);
     const todoItem = screen.getByText("Buy groceries");
 
     // should not be completed initially
@@ -39,7 +39,7 @@ describe("TodoApp Component", () => {
   });
 
   test("deletes a todo", () => {
-    render(<TodoApp />);
+    render(<TodoList />);
     const todoItem = screen.getByText("Walk the dog");
     const deleteButton = screen.getByLabelText("Delete Walk the dog");
 
