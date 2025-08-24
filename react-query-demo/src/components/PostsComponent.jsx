@@ -18,6 +18,8 @@ function PostsComponent() {
     queryFn: fetchPosts, // function to fetch data
     staleTime: 10000, // fresh for 10 seconds
     cacheTime: 60000, 
+    refetchOnWindowFocus: true, // default = true, but showing explicitly
+    keepPreviousData: true, // keep old data while fetching new data
   });
 
   if (isLoading) {
