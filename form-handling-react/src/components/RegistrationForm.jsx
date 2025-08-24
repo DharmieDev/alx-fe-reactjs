@@ -11,9 +11,9 @@ export default function RegistrationForm() {
     e.preventDefault();
 
     const newErrors = {};
-    if (!username.trim()) newErrors.username = "Please enter a username.";
-    if (!email.trim()) newErrors.email = "Please enter an email address.";
-    if (!password.trim()) newErrors.password = "Please enter a password.";
+    if (!username) newErrors.username = "Please enter a username.";  // 
+    if (!email) newErrors.email = "Please enter an email address.";  // 
+    if (!password) newErrors.password = "Please enter a password.";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
