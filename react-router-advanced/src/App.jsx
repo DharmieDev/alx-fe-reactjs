@@ -17,18 +17,18 @@ function App() {
       {/* Shared layout (header/nav/footer) */}
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
+        <Route path="/about" element={<About />} />
 
         {/* Blog list + dynamic (:postId) */}
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
 
-        <Route path="login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
 
         {/* Protected area */}
         <Route element={<ProtectedRoute />}>
           {/* Nested routes inside Profile */}
-          <Route path="profile" element={<Profile />}>
+          <Route path="/profile" element={<Profile />}>
           </Route>
         </Route>
 
