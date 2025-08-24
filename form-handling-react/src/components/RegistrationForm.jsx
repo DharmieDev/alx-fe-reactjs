@@ -1,123 +1,81 @@
 import { useState } from "react";
 
 export default function RegistrationForm() {
-  // 1) One state object for all fields
-  const [form, setForm] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
+  // Each field has its own state
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
-  // 2) Hold simple error messages per field
-  const [problems, setProblems] = useState({});
-
-  // 3) One onChange for all inputs (uses the input's `name`)
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    // keep the rest of the form, update just the one field
-    setForm((prev) => ({ ...prev, [name]: value }));
-
-    // clear the error for this field as the user fixes it
-    if (problems[name]) {
-      setProblems((prev) => ({ ...prev, [name]: undefined }));
-    }
-  };
-
-  // 4) Basic "not empty" check on submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const nextProblems = {};
-    if (!form.username.trim()) nextProblems.username = "Please enter a username.";
-    if (!form.email.trim()) nextProblems.email = "Please enter an email address.";
-    if (!form.password.trim()) nextProblems.password = "Please enter a password.";
+    const newErrors = {};
+    if (!username.trim()) newErrors.username = "Please enter a username.";
+    if (!email.trim()) newErrors.email = "Please enter an email address.";
+    if (!password.trim()) newErrors.password = "Please enter a password.";
 
-    // If any problems found, show them and stop
-    if (Object.keys(nextProblems).length > 0) {
-      setProblems(nextProblems);
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
-    // If we reach here, the form is filled in
-    console.log("Submitted data:", form);
-    alert(`Registered ${form.username}!`);
+    console.log("Submitted data:", { username, email, password });
+    alert(`Registered ${username}!`);
 
-    // Optional: reset the form
-    setForm({ username: "", email: "", password: "" });
-    setProblems({});
+    // Reset fields
+    setUsername("");
+    setEmail("");
+    setPassword("");
+    setErrors({});
   };
 
-  // 5) Small UX touch: disable button until everything has text
-  const isDisabled =
-    !form.username.trim() || !form.email.trim() || !form.password.trim();
+  const isDisabled = !username.trim() || !email.trim() || !password.trim();
 
   return (
-    // noValidate lets us show our own messages instead of the browser's default bubbles
-    <form onSubmit={handleSubmit} noValidate style={{ maxWidth: 420 }}>
+    <form onSubmit={handleSubmit} noValidate>
       <h2>Create an account</h2>
 
-      <div style={{ marginBottom: 12 }}>
-        <label htmlFor="username">Username</label><br />
+      {/* Username */}
+      <div>
+        <label htmlFor="username">Username</label>
         <input
           id="username"
           name="username"
           type="text"
-          value={form.username}
-          onChange={handleChange}
-          aria-invalid={!!problems.username}
-          aria-describedby={problems.username ? "username-error" : undefined}
-          placeholder="e.g. cool_dev_123"
-          style={{ width: "100%", padding: 8 }}
+          value={username}           
+          onChange={(e) => setUsername(e.target.value)}
         />
-        {problems.username && (
-          <p id="username-error" role="alert" style={{ color: "crimson", margin: "6px 0 0" }}>
-            {problems.username}
-          </p>
-        )}
+        {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
       </div>
 
-      <div style={{ marginBottom: 12 }}>
-        <label htmlFor="email">Email</label><br />
+      {/* Email */}
+      <div>
+        <label htmlFor="email">Email</label>
         <input
           id="email"
           name="email"
           type="email"
-          value={form.email}
-          onChange={handleChange}
-          aria-invalid={!!problems.email}
-          aria-describedby={problems.email ? "email-error" : undefined}
-          placeholder="you@example.com"
-          style={{ width: "100%", padding: 8 }}
+          value={email}               
+          onChange={(e) => setEmail(e.target.value)}
         />
-        {problems.email && (
-          <p id="email-error" role="alert" style={{ color: "crimson", margin: "6px 0 0" }}>
-            {problems.email}
-          </p>
-        )}
+        {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
       </div>
 
-      <div style={{ marginBottom: 12 }}>
-        <label htmlFor="password">Password</label><br />
+      {/* Password */}
+      <div>
+        <label htmlFor="password">Password</label>
         <input
           id="password"
           name="password"
           type="password"
-          value={form.password}
-          onChange={handleChange}
-          aria-invalid={!!problems.password}
-          aria-describedby={problems.password ? "password-error" : undefined}
-          placeholder="••••••••"
-          style={{ width: "100%", padding: 8 }}
+          value={password}            
+          onChange={(e) => setPassword(e.target.value)}
         />
-        {problems.password && (
-          <p id="password-error" role="alert" style={{ color: "crimson", margin: "6px 0 0" }}>
-            {problems.password}
-          </p>
-        )}
+        {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
       </div>
 
-      <button type="submit" disabled={isDisabled} style={{ padding: "10px 14px" }}>
+      <button type="submit" disabled={isDisabled}>
         Register
       </button>
     </form>
