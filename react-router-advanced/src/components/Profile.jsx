@@ -1,4 +1,6 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Routes, Route, Outlet } from "react-router-dom";
+import ProfileDetails from "../pages/ProfileDetails.jsx";
+import ProfileSettings from "../pages/ProfileSettings.jsx";
 
 const tabStyle = ({ isActive }) => ({
   padding: "8px 10px",
@@ -19,8 +21,16 @@ export default function Profile() {
         <NavLink to="settings" style={tabStyle}>Settings</NavLink>
       </nav>
 
-      {/* Child routes render here */}
+      {/* Nested route definitions live here */}
+      <Routes>
+        <Route index element={<ProfileDetails />} />
+        <Route path="details" element={<ProfileDetails />} />
+        <Route path="settings" element={<ProfileSettings />} />
+      </Routes>
+
+      {/* Optional Outlet if you want extra nested levels */}
       <Outlet />
     </div>
   );
 }
+
