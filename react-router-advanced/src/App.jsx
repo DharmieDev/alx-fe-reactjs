@@ -20,8 +20,8 @@ function App() {
         <Route path="about" element={<About />} />
 
         {/* Blog list + dynamic (:postId) */}
-        <Route path="blog" element={<Blog />} />
-        <Route path="blog/:postId" element={<BlogPost />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
 
         <Route path="login" element={<Login />} />
 
