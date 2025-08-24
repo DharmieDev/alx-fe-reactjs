@@ -4,16 +4,9 @@ import * as Yup from "yup";
 
 // 1) Yup validation schema (what counts as "valid")
 const RegistrationSchema = Yup.object({
-  username: Yup.string()
-    .trim()
-    .required("Please enter a username."),
-  email: Yup.string()
-    .trim()
-    .email("Please enter a valid email address.")
-    .required("Email is required."),
-  password: Yup.string()
-    .min(6, "Password must be at least 6 characters.")
-    .required("Password is required."),
+  username: Yup.string().required("Please enter a username."),
+  email: Yup.string().required("Email is required."),
+  password: Yup.string().required("Password is required."),
 });
 
 export default function FormikForm() {
